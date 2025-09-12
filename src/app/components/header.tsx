@@ -1,7 +1,6 @@
 export default function Header() {
   return (
     <header className="sticky top-0 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0 ml-4 mr-4 py-2 bg-white z-10">
-      {/*Logo*/}
       <div className="flex gap-2 items-center">
         <img
           src="study.svg"
@@ -13,7 +12,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/*Search Filter*/}
       <input
         type="search"
         autoComplete="on"
