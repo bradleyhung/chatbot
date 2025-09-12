@@ -1,13 +1,11 @@
 import Header from "./components/header";
-import Topics from "./components/topics";
-import Welcome from "./components/welcome";
+import Body from "./components/topics";
 
 export default function Home() {
   return (
     <main>
       <Header />
-      <Topics />
-      <Welcome />
+      <Body />
     </main>
   );
 }

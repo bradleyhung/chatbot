@@ -36,10 +36,10 @@ const classes = [
   },
 ];
 
-export default function Topics() {
+export default function Body() {
   return (
-    <div className="max-w-6xl mx-auto p-6">
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="flex flex-col lg:flex-row">
+      <div className="grid gap-6 mx-auto p-6">
         {classes.map((classItem) => {
           return (
             <div
@@ -72,6 +72,46 @@ export default function Topics() {
             </div>
           );
         })}
+      </div>
+
+      <div className="flex-1 p-8">
+        <div className="bg-pink-50 rounded-2xl p-6 border border-pink-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Welcome to StudyHub
+          </h1>
+          <p className="text-lg text-gray-600 mb-8">
+            Your AI-powered learning companion. Explore study materials, ask
+            questions, and get instant answers to help you master any topic.
+          </p>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <h2 className="text-xl font-semibold text-gray-800 mb-3">
+                Quick Start
+              </h2>
+              <p className="text-gray-600 mb-4">
+                Browse topics in the sidebar or ask our AI chatbot any question
+                to get started.
+              </p>
+              <div className="text-sm text-gray-500">
+                Example: "What is Big O notation?" or "Explain recursion."
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <h2 className="text-xl font-semibold text-gray-800 mb-3">
+                AI Assistant
+              </h2>
+              <p className="text-gray-600 mb-4">
+                Get instant answers to complex questions like "What is Big O
+                notation?" or "Explain recursion."
+              </p>
+              <div className="text-sm text-gray-500">
+                Available 24/7 to help with your studies
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
