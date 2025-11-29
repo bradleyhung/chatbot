@@ -49,7 +49,7 @@ function slugify(text: string) {
 
 export default function Body() {
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div className="flex flex-col-reverse lg:flex-row">
       <div className="grid gap-6 mx-auto p-6">
         {classes.map((classItem) => {
           return (
