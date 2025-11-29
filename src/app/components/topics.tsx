@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const classes = [
   {
     id: "algorithms",
@@ -36,6 +38,15 @@ const classes = [
   },
 ];
 
+// simple slugify for anchors
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[\s\/]+/g, "-")
+    .replace(/[^\w-]/g, "");
+}
+
 export default function Body() {
   return (
     <div className="flex flex-col lg:flex-row">
@@ -60,13 +71,14 @@ export default function Body() {
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {classItem.topics.map((topic, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1.5 bg-orange-400 text-white text-sm font-medium rounded-full hover:bg-orange-500 transition-colors duration-200 cursor-pointer"
+                {classItem.topics.map((topic) => (
+                  <Link
+                    key={`${classItem.id}-${topic}`}
+                    href={`/${classItem.id}#${slugify(topic)}`}
+                    className="px-3 py-1.5 bg-orange-400 text-white text-sm font-medium rounded-full hover:bg-orange-500 transition-colors duration-200 cursor-pointer inline-block"
                   >
                     {topic}
-                  </span>
+                  </Link>
                 ))}
               </div>
             </div>
