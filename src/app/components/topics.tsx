@@ -74,7 +74,7 @@ export default function Body() {
                 {classItem.topics.map((topic) => (
                   <Link
                     key={`${classItem.id}-${topic}`}
-                    href={`/${classItem.id}#${slugify(topic)}`}
+                    href={`/courses/${classItem.id}#${slugify(topic)}`}
                     className="px-3 py-1.5 bg-orange-400 text-white text-sm font-medium rounded-full hover:bg-orange-500 transition-colors duration-200 cursor-pointer inline-block"
                   >
                     {topic}
