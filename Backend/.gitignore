@@ -1,0 +1,13 @@
+# Environment files
+.env*
+.venv/
+
+# Python cache & virtual environments
+__pycache__/
+*.pyc
+
+# ChromaDB files (do NOT commit)
+*.bin
+*.sqlite3
+chroma/
+chroma.db
