@@ -3,7 +3,7 @@
     "title": "StudyHub",
     "description": "Course materials to help students study for their classes"
   },
-  "content": [
+  "courses": [
     {
       "title": "Algorithms & Data Structures",
       "description": "Short reference sections for common topics. Click any topic from the sidebar to jump to the right section.",
