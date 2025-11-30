@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "title": "StudyHub",
+    "description": "Course materials to help students study for their classes"
+  },
+  "content": [
+    {
+      "title": "Algorithms & Data Structures",
+      "description": "Short reference sections for common topics. Click any topic from the sidebar to jump to the right section.",
+      "topics": [
+        {
+          "name": "Big O Notation",
+          "description": "Big O describes the upper bound of an algorithm's running time or space as input size grows. Common classes: O(1), O(log n), O(n), O(n log n), O(n^2).",
+          "details": "Quick example",
+          "example": "// linear scan -> O(n)\nfor (let i = 0; i < arr.length; i++) {\n  // work per element\n}"
+        },
+        {
+          "name": "Sorting Algorithms",
+          "description": "Common sorts: QuickSort (avg O(n log n)), MergeSort (O(n log n)), HeapSort (O(n log n)), Bubble/Insertion (O(n^2)). Choose by stability, memory, average/worst-case, and simplicity.",
+          "details": "When to use MergeSort",
+          "note": "Stable and predictable O(n log n) with extra O(n) memory; good for large datasets where stability matters."
+        },
+        {
+          "name": "Binary Trees",
+          "description": "A binary tree node has up to two children. Special forms: binary search tree (BST), AVL, red-black (balanced). Traversals: in-order, pre-order, post-order.",
+          "details": "BST property",
+          "note": "Left subtree keys < node key < right subtree keys — enables O(log n) average search/insertion (unbalanced worst-case O(n))."
+        },
+        {
+          "name": "Hash Tables",
+          "description": "Hash tables map keys to buckets via a hash function. Average access is O(1); collision resolution affects performance (chaining, open addressing). Good for fast lookups and frequency counting.",
+          "details": "Collision handling",
+          "note": "Chaining stores a list per bucket; open addressing probes to find an empty slot. Choose based on memory and clustering behavior."
+        }
+      ]
+    },
+    {
+      "title": "Database Systems",
+      "description": "Core concepts for designing, querying, and optimizing databases. Click any topic from the sidebar to jump to the right section.",
+      "topics": [
+        {
+          "name": "SQL Queries",
+          "description": "SQL (Structured Query Language) is used to interact with relational databases. Core operations: SELECT (read), INSERT (create), UPDATE (modify), DELETE (remove). Use JOINs to combine tables and WHERE clauses to filter results.",
+          "details": "Quick example",
+          "example": "SELECT users.name, orders.total\nFROM users\nINNER JOIN orders ON users.id = orders.user_id\nWHERE orders.total > 100;"
+        },
+        {
+          "name": "Normalization",
+          "description": "Database normalization organizes data to reduce redundancy and improve integrity. Normal forms: 1NF (atomic values), 2NF (no partial dependencies), 3NF (no transitive dependencies), BCNF (stricter 3NF). Trade-off: normalized schemas may require more JOINs.",
+          "details": "When to denormalize",
+          "note": "For read-heavy workloads, denormalization can improve performance by reducing JOINs, but increases storage and update complexity."
+        },
+        {
+          "name": "Indexing",
+          "description": "Indexes speed up data retrieval by creating efficient lookup structures (e.g., B-trees, hash indexes). Trade-off: faster reads, slower writes. Index columns frequently used in WHERE, JOIN, and ORDER BY clauses.",
+          "details": "Composite indexes",
+          "note": "Multi-column indexes (e.g., INDEX(last_name, first_name)) are effective when queries filter by prefix columns in order."
+        },
+        {
+          "name": "Transactions",
+          "description": "Transactions ensure ACID properties: Atomicity (all or nothing), Consistency (valid state), Isolation (concurrent execution), Durability (permanent after commit). Use BEGIN, COMMIT, and ROLLBACK to manage transactions.",
+          "details": "Isolation levels",
+          "note": "Read Uncommitted, Read Committed, Repeatable Read, Serializable — each balances consistency vs. concurrency differently."
+        }
+      ]
+    },
+    {
+      "title": "System Design",
+      "description": "Principles and patterns for building scalable, reliable distributed systems. Click any topic from the sidebar to jump to the right section.",
+      "topics": [
+        {
+          "name": "Scalability",
+          "description": "Scalability is a system's ability to handle increased load. Vertical scaling (bigger machines) vs. horizontal scaling (more machines). Horizontal scaling provides better fault tolerance and cost efficiency but requires distributed system design.",
+          "details": "Design considerations",
+          "note": "Stateless services scale easily. Use load balancers, database replication/sharding, message queues, and CDNs to distribute load."
+        },
+        {
+          "name": "Load Balancing",
+          "description": "Load balancers distribute incoming requests across multiple servers to optimize resource usage and prevent overload. Algorithms: round-robin, least connections, IP hash. Layer 4 (transport) vs. Layer 7 (application) balancing.",
+          "details": "Health checks",
+          "note": "Load balancers monitor server health and route traffic only to healthy instances, improving availability and fault tolerance."
+        },
+        {
+          "name": "Caching",
+          "description": "Caching stores frequently accessed data in fast storage to reduce latency and database load. Strategies: cache-aside, write-through, write-back. Consider TTL (time-to-live), eviction policies (LRU, LFU), and cache invalidation.",
+          "details": "Cache levels",
+          "note": "Client-side, CDN, application-level (Redis, Memcached), and database query cache — each layer reduces load on downstream components."
+        },
+        {
+          "name": "Microservices",
+          "description": "Microservices architecture splits applications into small, independent services that communicate via APIs. Benefits: independent deployment, technology flexibility, fault isolation. Challenges: distributed complexity, service discovery, data consistency.",
+          "details": "Communication patterns",
+          "note": "Synchronous (REST, gRPC) for request/response. Asynchronous (message queues, event streaming) for decoupled, resilient interactions."
+        }
+      ]
+    },
+    {
+      "title": "Web Development",
+      "description": "Modern web development frameworks, patterns, and best practices. Click any topic from the sidebar to jump to the right section.",
+      "topics": [
+        {
+          "name": "React",
+          "description": "React is a JavaScript library for building user interfaces using components. Key concepts: JSX (HTML-like syntax), props (data passing), state (component data), hooks (useState, useEffect), virtual DOM (efficient updates).",
+          "details": "Quick example",
+          "example": "function Counter() {\n  const [count, setCount] = useState(0);\n  return (\n    <button onClick={() => setCount(count + 1)}>\n      Count: {count}\n    </button>\n  );\n}"
+        },
+        {
+          "name": "Node.js",
+          "description": "Node.js is a JavaScript runtime for server-side development. Built on Chrome's V8 engine with event-driven, non-blocking I/O. Excellent for I/O-heavy applications: APIs, real-time apps, streaming. Use Express.js or Fastify for web frameworks.",
+          "details": "Event loop",
+          "note": "Node.js uses a single-threaded event loop to handle concurrent operations efficiently via callbacks, promises, and async/await."
+        },
+        {
+          "name": "REST APIs",
+          "description": "REST (Representational State Transfer) is an architectural style for web APIs. Uses HTTP methods: GET (read), POST (create), PUT/PATCH (update), DELETE (remove). Resources identified by URLs, stateless communication, standard response codes (200, 404, 500).",
+          "details": "Best practices",
+          "note": "Use nouns for resources (/users, /posts), proper HTTP methods, versioning (/v1/), meaningful status codes, and consistent JSON response format."
+        },
+        {
+          "name": "Authentication",
+          "description": "Authentication verifies user identity. Common methods: session-based (cookies), token-based (JWT), OAuth 2.0 (third-party), passwordless (magic links, biometrics). Always use HTTPS, hash passwords (bcrypt), implement rate limiting, and use secure session management.",
+          "details": "JWT tokens",
+          "note": "JSON Web Tokens contain encoded user data and signature. Stateless, scalable, but require careful expiration and refresh token handling."
+        }
+      ]
+    },
+    {
+      "title": "Mathematics",
+      "description": "Essential math concepts for computer science and engineering. Click any topic from the sidebar to jump to the right section.",
+      "topics": [
+        {
+          "name": "Calculus",
+          "description": "Calculus studies continuous change through derivatives (instantaneous rate of change) and integrals (accumulation). Key applications: optimization, modeling physical systems, machine learning (gradient descent).",
+          "details": "Quick example",
+          "example": "// derivative of f(x) = x² is f'(x) = 2x\n// at x=3: slope = 2(3) = 6"
+        },
+        {
+          "name": "Linear Algebra",
+          "description": "Linear algebra deals with vectors, matrices, and linear transformations. Essential for graphics, machine learning, and scientific computing. Core operations: matrix multiplication, determinants, eigenvalues, solving linear systems.",
+          "details": "Matrix multiplication",
+          "note": "For A (m×n) and B (n×p), result C (m×p) where C[i][j] = sum of A[i][k] * B[k][j] for all k. Non-commutative: AB ≠ BA."
+        },
+        {
+          "name": "Statistics",
+          "description": "Statistics analyzes and interprets data. Descriptive stats (mean, median, variance) summarize data. Inferential stats (hypothesis testing, confidence intervals) make predictions. Probability distributions (normal, binomial) model randomness.",
+          "details": "Central Limit Theorem",
+          "note": "Sample means approach a normal distribution as sample size increases, regardless of population distribution — foundation for many statistical tests."
+        },
+        {
+          "name": "Discrete Math",
+          "description": "Discrete mathematics covers countable structures: logic, sets, combinatorics, graph theory, number theory. Critical for computer science: algorithm analysis, cryptography, network design, formal verification.",
+          "details": "Graph theory basics",
+          "note": "Graphs model relationships (nodes = entities, edges = connections). Applications: social networks, routing algorithms, dependency resolution. Common problems: shortest path, minimum spanning tree."
+        }
+      ]
+    }
+  ]
+}

@@ -123,6 +123,9 @@ export default function Body() {
               </div>
             </div>
           </div>
+
+          {/*Creating my chatbot here (Use bg-pink-50) */}
+          <div className="border mt-2 border-blue-300">MMMMMMMMMMMMMMMM</div>
         </div>
       </div>
     </div>
