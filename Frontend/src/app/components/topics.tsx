@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Chatbot from "./chatbot";
 
 const classes = [
   {
@@ -124,8 +125,9 @@ export default function Body() {
             </div>
           </div>
 
-          {/*Creating my chatbot here (Use bg-pink-50) */}
-          <div className="border mt-2 border-blue-300">MMMMMMMMMMMMMMMM</div>
+          <div className="mt-6">
+            <Chatbot />
+          </div>
         </div>
       </div>
     </div>
