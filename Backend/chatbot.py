@@ -15,7 +15,10 @@ load_dotenv()
 
 app = Flask(__name__)
 # Only allow requests from your frontend
-CORS(app, origins=["http://localhost:3000"])
+CORS(app, origins=[
+    "http://localhost:3000",  # Local development
+    "https://*.vercel.app"     # Vercel deployment (update with your actual domain)
+])
 app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024  # Limit request size to 1MB
 
 # Store conversation history per session (max 1000 sessions, auto-cleanup)
