@@ -80,9 +80,9 @@ export default function WebPage() {
           <h2 className="text-2xl font-semibold mb-2">Node.js</h2>
           <p className="text-gray-700 mb-2">
             Node.js is a JavaScript runtime for server-side development. Built
-            on Chrome&apos;s V8 engine with event-driven, non-blocking I/O. Excellent
-            for I/O-heavy applications: APIs, real-time apps, streaming. Use
-            Express.js or Fastify for web frameworks.
+            on Chrome&apos;s V8 engine with event-driven, non-blocking I/O.
+            Excellent for I/O-heavy applications: APIs, real-time apps,
+            streaming. Use Express.js or Fastify for web frameworks.
           </p>
           <div className="bg-gray-50 p-4 rounded border">
             <strong>Event loop</strong>

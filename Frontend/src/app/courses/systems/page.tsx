@@ -57,10 +57,10 @@ export default function SystemsPage() {
         <section id="scalability" className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">Scalability</h2>
           <p className="text-gray-700 mb-2">
-            Scalability is a system&apos;s ability to handle increased load. Vertical
-            scaling (bigger machines) vs. horizontal scaling (more machines).
-            Horizontal scaling provides better fault tolerance and cost
-            efficiency but requires distributed system design.
+            Scalability is a system&apos;s ability to handle increased load.
+            Vertical scaling (bigger machines) vs. horizontal scaling (more
+            machines). Horizontal scaling provides better fault tolerance and
+            cost efficiency but requires distributed system design.
           </p>
           <div className="bg-gray-50 p-4 rounded border">
             <strong>Design considerations</strong>

@@ -107,7 +107,8 @@ export default function Body() {
                 to get started.
               </p>
               <div className="text-sm text-gray-500">
-                Example: &quot;What is Big O notation?&quot; or &quot;Explain recursion.&quot;
+                Example: &quot;What is Big O notation?&quot; or &quot;Explain
+                recursion.&quot;
               </div>
             </div>
 
@@ -116,8 +117,8 @@ export default function Body() {
                 AI Assistant
               </h2>
               <p className="text-gray-600 mb-4">
-                Get instant answers to complex questions like &quot;What is Big O
-                notation?&quot; or &quot;Explain recursion.&quot;
+                Get instant answers to complex questions like &quot;What is Big
+                O notation?&quot; or &quot;Explain recursion.&quot;
               </p>
               <div className="text-sm text-gray-500">
                 Available 24/7 to help with your studies
