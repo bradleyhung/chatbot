@@ -153,4 +153,6 @@ def health():
 
 if __name__ == '__main__':
     # Set debug=False for production
-    app.run(debug=False, port=5000)
+    # Use PORT from environment (Hugging Face uses 7860, local uses 5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port)
