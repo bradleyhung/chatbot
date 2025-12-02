@@ -38,8 +38,8 @@ file_path = "file.json"
 jq_schema = ".courses[]"
 loader = JSONLoader(file_path=file_path, jq_schema=jq_schema, text_content=False)
 documents = loader.load()
-# Embed
-embedding = HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-large")
+# Embed - using smaller model for free tier deployment (120MB instead of 2.24GB)
+embedding = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
 chunks = text_splitter.split_documents(documents)
 embedded_chunks = embedding.embed_documents([chunk.page_content for chunk in chunks])
