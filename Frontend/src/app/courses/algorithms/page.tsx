@@ -58,7 +58,7 @@ export default function AlgorithmsPage() {
         <section id="big-o-notation" className="mb-8">
           <h2 className="text-2xl font-semibold mb-2">Big O Notation</h2>
           <p className="text-gray-700 mb-2">
-            Big O describes the upper bound of an algorithm's running time or
+            Big O describes the upper bound of an algorithm&apos;s running time or
             space as input size grows. Common classes: O(1), O(log n), O(n), O(n
             log n), O(n^2).
           </p>

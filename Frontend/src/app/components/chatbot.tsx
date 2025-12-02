@@ -47,7 +47,7 @@ export default function Chatbot() {
           { type: "bot", text: `Error: ${data.error}` },
         ]);
       }
-    } catch (error) {
+    } catch {
       setMessages((prev) => [
         ...prev,
         {
