@@ -1,13 +1,13 @@
 # StudyHub AI Chatbot
 
-A RAG-based AI study assistant powered by LangChain, ChromaDB, and OpenRouter, with a Next.js frontend deployed on Vercel.
+A RAG-based AI study assistant powered by LangChain, ChromaDB, and OpenRouter, with a Next.js frontend and Flask backend - fully deployed and 100% free!
 
 🌐 **Live Demo**: https://chatbot-bradley.vercel.app/
 
 ## 🏗️ Architecture
 
-- **Frontend**: Next.js 15 + React 19 + Tailwind CSS 4 (Deployed on Vercel)
-- **Backend**: Flask + LangChain + ChromaDB + HuggingFace Embeddings (Pending deployment)
+- **Frontend**: Next.js 15 + React 19 + Tailwind CSS 4 (Deployed on Vercel ✅)
+- **Backend**: Flask + LangChain + ChromaDB + HuggingFace Embeddings (Deployed on Hugging Face Spaces ✅)
 - **Authentication**: Clerk
 - **AI Model**: Mistral-7B-Instruct (via OpenRouter - Free tier)
 
@@ -31,30 +31,40 @@ A RAG-based AI study assistant powered by LangChain, ChromaDB, and OpenRouter, w
 ## 🚀 Deployment Status
 
 ### Frontend (Vercel) ✅
-- **Status**: Deployed
+
+- **Status**: Live and deployed
 - **URL**: https://chatbot-bradley.vercel.app/
-- **Features**: 
+- **Features**:
   - Automatic HTTPS
   - Global CDN
   - Instant deployments on push
+  - Environment-based configuration
 
-### Backend (Pending) ⏳
-**Note**: Backend requires deployment to a platform with sufficient RAM for embeddings.
+### Backend (Hugging Face Spaces) ✅
 
-**Recommended free options:**
-1. **Fly.io** (Best for embeddings) - 1GB RAM free tier
-2. **Render** (Requires lightweight version) - 512MB RAM free tier
+- **Status**: Live and deployed
+- **URL**: https://bradleyhung-studyhub-chatbot-backend.hf.space
+- **Features**:
+  - 2GB RAM (perfect for embeddings)
+  - Always-on (no cold starts)
+  - Built-in secrets management
+  - Free forever (CPU Basic tier)
+  - Docker-based deployment
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for backend deployment instructions.
+**Total Cost**: $0.00/month - Completely free! 🎉
+
+See [HUGGINGFACE_DEPLOYMENT.md](HUGGINGFACE_DEPLOYMENT.md) for backend deployment guide.
 
 ## 🛠️ Local Development
 
 ### Prerequisites
+
 - Node.js 20+
 - Python 3.11+
 - Git
 
 ### Frontend Setup
+
 ```bash
 cd Frontend
 npm install
@@ -66,6 +76,7 @@ npm run dev
 Visit http://localhost:3000
 
 ### Backend Setup
+
 ```bash
 cd Backend
 python -m venv .venv
@@ -93,6 +104,7 @@ API runs at http://localhost:5000
 ## 📦 Tech Stack Details
 
 ### Frontend Dependencies
+
 - Next.js 15.5.3 with Turbopack
 - React 19.1.0
 - Tailwind CSS 4
@@ -100,6 +112,7 @@ API runs at http://localhost:5000
 - TypeScript 5
 
 ### Backend Dependencies
+
 - Flask 3.1.0 with CORS
 - LangChain (Community, OpenAI, Chroma, HuggingFace)
 - ChromaDB 1.3.5
@@ -120,13 +133,12 @@ This project is for educational purposes.
 
 ## 🐛 Known Issues
 
-- Backend deployment requires platform with >512MB RAM for embeddings
-- Free OpenRouter API may have rate limits
-- First request after cold start takes ~5-10 seconds
+- Free OpenRouter API may have rate limits during high usage
+- First AI response may take ~5-10 seconds while model loads
 
 ## 🔮 Future Enhancements
 
-- [ ] Deploy backend to production
+- [ ] Add more course topics and subjects
 - [ ] Add more course topics
 - [ ] Implement user feedback system
 - [ ] Add code syntax highlighting in responses
